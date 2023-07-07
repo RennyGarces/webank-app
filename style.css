@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: rgb(139, 168, 149);
+
+  height: 100vh;
+  padding: 2rem;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.nav-login {
+  display: flex;
+  align-items: center;
+}
+.welcome {
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.login {
+  display: flex;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 3rem;
+  margin-right: 1rem;
+  color: rgb(104, 104, 104);
+  border: 1px solid #90cab2;
+  background-image: linear-gradient(to top left, #90cab2, #ffffff);
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #90cab2;
+}
+
+.login__input::placeholder {
+  color: #5c5b5b;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 3rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login__btn:hover,
+.btn--sort:hover {
+  outline: none;
+  color: #e2e0a9;
+}
+.logo {
+  margin-left: 2rem;
+}
+.logo-company::before {
+  position: absolute;
+  content: 'USER: rg PIN: 1111 | USER: ug PIN:2222';
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #363636;
+  top: 0;
+  right: 10px;
+}
+/*-------------main-----------------*/
+
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  font-size: 2rem;
+  /* change visibility */
+  opacity: 0;
+}
+
+.timer {
+  font-weight: 600;
+}
+
+.app {
+  display: grid;
+  /* change visibility */
+  opacity: 0;
+  gap: 1rem;
+  transition: all 1s;
+  grid-template-columns: 0.7fr 1fr 1fr;
+}
+.summary {
+  grid-column: 1/-1;
+  background-image: linear-gradient(to top left, #90cab23a, #46464644);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
+
+.summary__label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+
+.summary__value {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+
+.summary__value--in,
+.summary__value--interest {
+  color: #0026fd;
+}
+
+.summary__value--out {
+  color: #a13303;
+}
+
+.btn--sort {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.balance,
+.operation {
+  background-image: linear-gradient(to top left, #4bc1b5, #ffffff00);
+  height: 15rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  color: #333;
+}
+.movements {
+  grid-column: 2/-1;
+  grid-row: 2/6;
+  background-image: linear-gradient(to top left, #ffffff, #ffffff00);
+  font-weight: 600;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  color: #333;
+}
+.movements__row {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  border-bottom: 2px solid #61616121;
+}
+
+.movements__type {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+}
+
+.movements__date {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #3d3c3c;
+}
+
+.operation--transfer {
+  background-image: linear-gradient(to top left, #d0b81b, #ffffff28);
+}
+
+.operation--loan {
+  background-image: linear-gradient(to top left, #5522a7, #e2fdca54);
+}
+
+.operation--close {
+  background-image: linear-gradient(to top left, #e52a59e6, #ffffff2d);
+}
+
+.balance,
+h2,
+.form__label {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form__input {
+  border: none;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.752);
+  font-family: inherit;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #313131;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__btn {
+  border: none;
+  width: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form__btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* media queries */
+
+@media (max-width: 63em) {
+  .balance,
+  h2,
+  .form__label,
+  .movements__type {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 45em) {
+  .form__btn {
+    border: none;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 5rem;
+    font-size: 0;
+    background-color: #ffffffcc;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .form__btn:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 35em) {
+  .logo {
+    margin-left: 0rem;
+  }
+  .balance,
+  .movements,
+  .form__label,
+  h2 {
+    font-size: 2.2rem;
+  }
+  .nav-login {
+    align-items: center;
+    flex-direction: column;
+  }
+  .login {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .login__input {
+    font-size: 1.4rem;
+    width: 8rem;
+  }
+
+  .login__btn {
+    font-size: 2rem;
+  }
+  .login__btn::after {
+    content: ' ENTER';
+  }
+
+  .login__btn:hover,
+  .login__btn:focus,
+  .btn--sort:hover,
+  .btn--sort:focus {
+    outline: none;
+    color: #ffffff00;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    opacity: 100;
+    gap: 1rem;
+    transition: all 1s;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+
+  .summary__label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .summary__value {
+    font-size: 2.5rem;
+  }
+  .btn--sort {
+    border: none;
+    background: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-image: linear-gradient(to top left, #4bc1b562, #ffffff9e);
+    padding: 10px;
+    border-radius: 1rem;
+  }
+}
